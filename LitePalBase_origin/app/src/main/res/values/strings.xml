@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LitePalBase</string>
+    <string name="cardview">用来放置其他的东西</string>
+    <string-array name="spingarr">
+        <item>在校学生</item>
+        <item>离校学生</item>
+    </string-array>
+</resources>

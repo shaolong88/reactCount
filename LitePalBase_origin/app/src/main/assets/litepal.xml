@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <litepal>
+    <dbname value="group"></dbname>
+    <version value="4"></version>
+    <list>
+        <!--<mapping class="com.example.cshaoshao.litepalbase.entities.Info"></mapping>-->
+        <mapping class="com.example.cshaoshao.litepalbase.entities.Person"></mapping>
+    </list>
+</litepal>
