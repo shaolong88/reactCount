@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link, BrowserRouter,withRouter, } from 'react-router-dom';
 import PropTypes from "prop-types";
-import PubSub from 'pubsub-js'
 
 export default class App extends Component{
   static contextTypes = {
@@ -9,21 +8,8 @@ export default class App extends Component{
   }
 constructor(props,context){
   super(props,context);
-  this.state={
-    increase:'none',
-  }
 }
 
-componentDidMount(){
-  this.pubsub_token = PubSub.subscribe('products', function (topic,products) {
-    this.setState({
-      increase: products
-    });
-  }.bind(this));
-}
-componentWillUnmount(){
-  PubSub.unsubscribe(this.pubsub_token);
-}
   render() {
   return (
     <div>
@@ -42,8 +28,11 @@ componentWillUnmount(){
           }}>Go to /App/foo</button>
       </div>
       <div style={{ marginTop: '1.5em' }}>{ this.props.children}</div>
-      <div style={{ marginTop: '1.5em' }}>{ this.state.increase}</div>
     </div>
   )
 }
 }
+          // this.props.history.push("/App/bar")
+          // history.push('/App/foo');
+          //this.history.push('/App/foo')
+          //history.goBack()

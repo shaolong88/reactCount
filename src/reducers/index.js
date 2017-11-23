@@ -5,14 +5,14 @@ const initialState={
 function update(state = initialState, action) {
     switch (action.type) {
         case 'INCREASE':
-            // console.log("INCREASE");
-            // console.log(state);
+            console.log("INCREASE");
+            console.log(state);
             return {
                 number: state.number+action.payload 
             };
         case 'DECREASE':
-            // console.log("DECREASE");
-            // console.log(state);
+            console.log("DECREASE");
+            console.log(state);
             return {
                 number:state.number- action.payload  
             };
